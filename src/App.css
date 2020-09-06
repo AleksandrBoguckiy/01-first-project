@@ -10,22 +10,3 @@
   grid-template-columns: 2fr 10fr;
 /*  grid-gap: 10px;*/
 }
-
-.header {
-  background-color: limegreen;
-  grid-area: h;
-}
-
-header img {
-  width: 75px;
-}
-
-.nav {
-  background-color: cornflowerblue;
-  grid-area: n;
-}
-
-.content {
-  background-color: aqua;
-  grid-area: c;
-}
