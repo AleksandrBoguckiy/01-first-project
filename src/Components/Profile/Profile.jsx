@@ -4,7 +4,7 @@ import MyPosts from "./MyPosts/MyPosts";
 
 const Profile = () => {
     return (
-        <div className={s.content}>
+        <div>
             <img src='https://www.onetwotrip.com/ru/blog/wp-content/uploads/2020/02/bali.jpg'/>
             <div>
                 <img
