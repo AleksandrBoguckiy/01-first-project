@@ -9,6 +9,13 @@
     text-decoration: none;
 }
 
+.item a:hover {
+    color: blue;
+    transition: 0.5s linear;
+}
+
 .item a.active {
-    color: limegreen;
+    color: white;
+    background: royalblue;
+    padding: 1px;
 }

@@ -13,8 +13,23 @@
     padding: 10px;
 }
 
-.dialogItems .active {
-    color: limegreen;
+.dialogItems .dialog .active {
+    color: white;
+    background: limegreen;
+    padding: 1px;
+}
+
+.dialog a {
+    color: white;
+}
+
+.dialog a:hover {
+    color: green;
+    transition: 0.5s linear;
+}
+
+.dialogItems .dialog a {
+    text-decoration: none;
 }
 
 .massages {
@@ -22,5 +37,5 @@
 }
 
 .massages .massage {
-
+    color: darkgreen;
 }

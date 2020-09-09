@@ -9,7 +9,7 @@ const Profile = () => {
             <div>
                 <img src='https://reallycom.ru/wp-content/uploads/2019/09/minecraft_youtube_avatar__speedycraft_by_bustedgun-d6ktkgl-e1567631489917.jpg' />
             </div>
-            <MyPosts/>
+            <MyPosts />
         </div>
     )
 }
