@@ -1,0 +1,9 @@
+.header {
+    width: max-content;
+    height: 250px;
+}
+
+.avatar {
+    width: 300px;
+    padding: 10px;
+}

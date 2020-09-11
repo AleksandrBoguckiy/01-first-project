@@ -3,42 +3,37 @@ import s from './Dialogs.module.css';
 import Navbar from "../Navbar/Navbar";
 import {NavLink} from "react-router-dom";
 
+const DialogItem = (props) => {
+    let path = '/dialogs/' + props.id
+    return (
+        <div className={s.dialog}>
+            <NavLink to={path} activeClassName={s.active}>{props.name}</NavLink>
+        </div>
+    );
+}
+
+const Message = (props) => {
+    return (
+        <div className={s.messages}>
+            {props.message}
+        </div>
+    );
+}
 const Dialogs = (props) => {
     return (
         <div className={s.dialogs}>
             <div className={s.dialogItems}>
-                <div className={s.dialog}>
-                    <NavLink to='/dialogs/1' activeClassName={s.active}>Oleg</NavLink>
-                </div>
-                <div className={s.dialog}>
-                    <NavLink to='/dialogs/2' activeClassName={s.active}>Egor</NavLink>
-                </div>
-                <div className={s.dialog}>
-                    <NavLink to='/dialogs/3' activeClassName={s.active}>Mariya</NavLink>
-                </div>
-                <div className={s.dialog}>
-                    <NavLink to='/dialogs/4' activeClassName={s.active}>Aleksandr</NavLink>
-                </div>
-                <div className={s.dialog}>
-                    <NavLink to='/dialogs/5' activeClassName={s.active}>Ruslan</NavLink>
-                </div>
-                <div className={s.dialog}>
-                    <NavLink to='/dialogs/6' activeClassName={s.active}>Irina</NavLink>
-                </div>
+                <DialogItem name='Oleg' id='1' />
+                <DialogItem name='Egor' id='2' />
+                <DialogItem name='Mariya' id='3' />
+                <DialogItem name='Aleksandr' id='4' />
+                <DialogItem name='Ruslan' id='5' />
+                <DialogItem name='Irina' id='6' />
             </div>
-            <div className={s.massages}>
-                <div className={s.massage}>
-                    <img src='https://lumpics.ru/wp-content/uploads/2017/11/Programmyi-dlya-sozdaniya-avatarok.png' />
-                    Hi!
-                </div>
-                <div className={s.massage}>
-                    <img src='https://lumpics.ru/wp-content/uploads/2017/11/Programmyi-dlya-sozdaniya-avatarok.png' />
-                    How are you?
-                </div>
-                <div className={s.massage}>
-                    <img src='https://lumpics.ru/wp-content/uploads/2017/11/Programmyi-dlya-sozdaniya-avatarok.png' />
-                    Hey, are you there?
-                </div>
+            <div className={s.messages}>
+                <Message message='Hi!' />
+                <Message message='How are you?' />
+                <Message message='Hey, are you there?' />
             </div>
         </div>
     )

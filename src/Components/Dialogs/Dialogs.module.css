@@ -32,11 +32,11 @@
     text-decoration: none;
 }
 
-.massages {
+.messages {
     padding: 10px;
     background-color: lightgrey;
 }
 
-.massages .massage {
+.messages .message {
     color: black;
 }
