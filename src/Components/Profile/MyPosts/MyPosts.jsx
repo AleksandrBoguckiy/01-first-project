@@ -5,9 +5,12 @@ import Post from "./Post/Post";
 const MyPosts = () => {
 
     let postsData = [
-        {message: 'Hey, how are you?', like: '15'},
-        {message: "It's my first post!", like: "23"},
+        {id: '1', message: 'Hey, how are you?', like: '15'},
+        {id: '2', message: "It's my first post!", like: '23'},
     ];
+
+    let postElements = postsData
+        .map(message => <Post massage={message.message} like={message.like} />)
 
     return (
         <div className={s.posts}>
@@ -19,8 +22,7 @@ const MyPosts = () => {
                 <div>
                     <button className={s.btn + " " + s.btn1}>Add post</button>
                 </div>
-                <Post massage={postsData[0].message} like={postsData[0].like} />
-                <Post massage={postsData[1].message} like={postsData[1].like} />
+                { postElements }
             </div>
         </div>
     )
