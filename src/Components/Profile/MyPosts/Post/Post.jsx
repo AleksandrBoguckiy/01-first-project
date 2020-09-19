@@ -7,7 +7,7 @@ const Post = (props) => {
             <img src='https://lumpics.ru/wp-content/uploads/2017/11/Programmyi-dlya-sozdaniya-avatarok.png'/>
             {props.massage}
             <div>
-                <span>{props.like} like</span>
+                <span>{props.like} likes</span>
             </div>
         </div>
     )
