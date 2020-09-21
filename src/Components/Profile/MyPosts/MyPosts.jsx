@@ -4,13 +4,13 @@ import Post from "./Post/Post";
 
 const MyPosts = () => {
 
-    let postsData = [
+    let posts = [
         {id: '1', message: 'Hey, how are you?', like: '15'},
         {id: '2', message: "It's my first post!", like: '23'},
     ];
 
-    let postElements = postsData
-        .map(message => <Post massage={message.message} like={message.like} />)
+    let postElements = posts
+        .map(p => <Post massage={p.message} like={p.like} />)
 
     return (
         <div className={s.posts}>
