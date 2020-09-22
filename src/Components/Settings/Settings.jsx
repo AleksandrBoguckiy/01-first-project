@@ -1,9 +1,9 @@
 import React from 'react';
-import s from './Settings.module.css';
+import style from './Settings.module.css';
 
 const Settings = (props) => {
     return (
-        <div className={s.setings}>
+        <div className={style.setings}>
             Setings
         </div>
     );

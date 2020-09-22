@@ -1,28 +1,19 @@
 import React from 'react';
-import s from './MyPosts.module.css';
-import Post from "./Post/Post";
+import style from './MyPosts.module.css';
 
-const MyPosts = () => {
-
-    let posts = [
-        {id: '1', message: 'Hey, how are you?', like: '15'},
-        {id: '2', message: "It's my first post!", like: '23'},
-    ];
-
-    let postElements = posts
-        .map(p => <Post massage={p.message} like={p.like} />)
+const MyPosts = (props) => {
 
     return (
-        <div className={s.posts}>
+        <div className={style.posts}>
             <h3>My posts</h3>
             <div>
                 <div>
                     <textarea></textarea>
                 </div>
                 <div>
-                    <button className={s.btn + " " + s.btn1}>Add post</button>
+                    <button className={style.btn + " " + style.btn1}>Add post</button>
                 </div>
-                { postElements }
+                { props.posts }
             </div>
         </div>
     )

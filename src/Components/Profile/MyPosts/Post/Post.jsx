@@ -1,9 +1,9 @@
 import React from 'react';
-import s from './Post.module.css';
+import style from './Post.module.css';
 
 const Post = (props) => {
     return (
-        <div className={s.item}>
+        <div className={style.item}>
             <img src='https://avatarko.ru/img/kartinka/5/siluet_4108.jpg'/>
             {props.massage}
             <div>
