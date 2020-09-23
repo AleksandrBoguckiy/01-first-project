@@ -12,9 +12,6 @@ let posts = [
     {id: '2', message: "It's my first post!", like: '23'},
 ];
 
-let postElements = posts
-    .map(p => <Post massage={p.message} like={p.like} />)
-
 let dialogs = [
     {id: '1', name: 'Oleg'},
     {id: '2', name: 'Egor'},
@@ -24,22 +21,16 @@ let dialogs = [
     {id: '6', name: 'Irina'}
 ];
 
-let dialogElements = dialogs
-    .map(d => <DialogItem name={d.name} id={d.id} />);
-
 let messages = [
     {id: '1', message: 'Hi!'},
     {id: '2', message: 'How are you?'},
     {id: '3', message: 'Hey, are you there?'}
 ];
 
-let messageElements = messages
-    .map(m => <Message message={m.message} />);
-
 ReactDOM.render(
 
   <React.StrictMode>
-    <App posts={postElements} dialogs={dialogElements} messages={messageElements} />
+    <App posts={posts} dialogs={dialogs} messages={messages} />
   </React.StrictMode>,
   document.getElementById('root')
 
