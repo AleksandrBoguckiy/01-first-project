@@ -24,7 +24,7 @@ let state = {
         myFriends: [
             {id: '1', name: 'Alex'},
             {id: '2', name: 'Romeo'},
-            {id: '3', name: 'Nik'},
+            {id: '3', name: 'Nik'}
         ]
     }
 }
