@@ -19,23 +19,33 @@
     color: black;
 }
 
-.btn1:active{
+.btn1:active {
     background-color: #33393D;
     color: #FFCD24;
     border: 2px solid #33393D;
 }
 
-.posts {
-    color: #FFCD24;
-    padding: 10px;
+.inputForm {
+    position:relative;
+    width:200px;
+    grid-area: d;
+    margin-top: 20px;
 }
 
-textarea {
+.inputForm textarea {
     outline: none;
     border: 2px solid #FFCD24;
     resize: none;
     display: block;
-    width: 600px;
+    width: 650px;
     height: 50px;
+    margin-bottom: 20px;
+    padding-right: 150px;
     overflow: hidden;
+}
+
+.inputForm button {
+    position:absolute;
+    top:5px;
+    right:-600px;
 }
