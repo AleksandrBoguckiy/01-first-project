@@ -11,10 +11,13 @@
     width: 40px;
     height: 40px;
     border-radius: 30px;
+    margin-bottom: -15px;
+    margin-top: 15px;
 }
 
 .dialogItems {
-    padding: 10px;
+    padding: 20px;
+
 }
 
 .dialogItems .dialog .active {

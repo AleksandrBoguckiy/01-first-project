@@ -17,7 +17,8 @@ let state = {
         messages: [
             {id: '1', message: 'Hi!'},
             {id: '2', message: 'How are you?'},
-            {id: '3', message: 'Hey, are you there?'}
+            {id: '3', message: 'Hey, are you there?'},
+            {id: '4', message: 'Hello Friend! Yes I am listening to you'}
         ]
     },
     sidebar: {
