@@ -3,16 +3,21 @@ import style from './MessageInput.module.css';
 
 const MessageInput = (props) => {
 
-    let newMassage = React.createRef();
+    let newMessage = React.createRef();
 
     let sendMessage = () => {
-        let text = newMassage.current.value;
-        alert(text);
+        props.sendMessage();
     }
+
+    let onMessageChange = () => {
+        let text = newMessage.current.value;
+        props.updateSendMessageText(text);
+    }
+
     return (
         <div className={style.inputForm}>
             <div>
-                <textarea ref={newMassage} placeholder={'Write a message...'}></textarea>
+                <textarea onChange={onMessageChange} ref={newMessage} placeholder={'Write a message...'} value={props.newMessageText} />
             </div>
             <div>
                 <button onClick={sendMessage} className={style.btn + " " + style.btn1}>Send massage</button>

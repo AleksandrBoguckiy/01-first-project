@@ -7,10 +7,11 @@ import MessageInput from "./Message/MessageInput/MessageInput";
 const Dialogs = (props) => {
 
     let dialogElements =
-        props.state.dialogs.map(d => <DialogItem name={d.name} id={d.id} />);
+        props.dialogsPage.dialogs.map(d => <DialogItem name={d.name} id={d.id} />);
 
     let messageElements =
-        props.state.messages.map(m => <Message message={m.message} />);
+        props.dialogsPage.messages.map(m => <Message message={m.message} />);
+
 
     return (
         <div className={style.dialogs}>
@@ -20,7 +21,9 @@ const Dialogs = (props) => {
             <div className={style.messages}>
                 { messageElements }
             </div>
-            <MessageInput />
+            <MessageInput newMessageText={props.dialogsPage.newMessageText}
+                          updateSendMessageText={props.updateSendMessageText}
+                          sendMessage={props.sendMessage} />
         </div>
     )
 }
