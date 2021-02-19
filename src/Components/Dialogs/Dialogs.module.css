@@ -22,8 +22,7 @@
 
 .dialogItems .dialog .active {
     color: #FFCD24;
-    background: #33393D;
-    padding: 1px;
+    padding: 5px;
 }
 
 .dialog a {
@@ -32,7 +31,7 @@
 
 .dialog a:hover {
     color: #FFCD24;
-    transition: 0.5s linear;
+    transition: 0.2s linear;
 }
 
 .dialogItems .dialog a {

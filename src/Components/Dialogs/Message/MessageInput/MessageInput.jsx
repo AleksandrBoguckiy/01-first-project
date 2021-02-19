@@ -6,12 +6,12 @@ const MessageInput = (props) => {
     let newMessage = React.createRef();
 
     let sendMessage = () => {
-        props.sendMessage();
+        props.dispatch({ type: 'SEND-MESSAGE'});
     }
 
     let onMessageChange = () => {
         let text = newMessage.current.value;
-        props.updateSendMessageText(text);
+        props.dispatch({ type: 'UPDATE-SEND-MESSAGE-TEXT', newText: text });
     }
 
     return (

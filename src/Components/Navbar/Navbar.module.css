@@ -11,13 +11,12 @@
 
 .item a:hover {
     color: #FFCD24;
-    transition: 0.5s linear;
+    transition: 0.2s linear;
 }
 
 .item a.active {
     color: #FFCD24;
-    background: #666B6E;
-    padding: 1px;
+    padding: 5px;
 }
 
 .myFriends {

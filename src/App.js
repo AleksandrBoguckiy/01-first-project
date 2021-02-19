@@ -19,12 +19,10 @@ const App = (props) => {
                 <div className='app-wrapper-content'>
                     <Route redirect='' path='/profile' render={()=><Profile
                         profilePage={props.state.profilePage}
-                        addPost={props.addPost}
-                        updateNewTextPost={props.updateNewPostText} />} />
+                        dispatch={props.dispatch} />} />
                     <Route path='/dialogs' render={()=><Dialogs
                         dialogsPage={props.state.dialogsPage}
-                        sendMessage={props.sendMessage}
-                        updateSendMessageText={props.updateSendMessageText} /> } />
+                        dispatch={props.dispatch} /> } />
                     <Route path='/news' component={News} />
                     <Route path='/music' component={Music} />
                     <Route path='/settings' component={Settings} />
