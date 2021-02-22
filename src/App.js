@@ -10,7 +10,6 @@ import News from './Components/News/News';
 import Settings from './Components/Settings/Settings';
 
 const App = (props) => {
-
     return (
         <BrowserRouter>
             <div className='app-wrapper'>
