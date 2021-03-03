@@ -1,22 +1,22 @@
 import React from 'react';
 import style from './MyPosts.module.css';
 import Post from "./Post/Post";
-import {addPostActionCreator, updateNewPostTextActionCreator} from "../../../redux/profile-reducer";
 
 const MyPosts = (props) => {
+    debugger;
 
     let postElements =
         props.posts.map(p => <Post massage={p.message} like={p.like} />);
 
     let newPostElement = React.createRef();
 
-    let addPost = () => {
-        props.dispatch(addPostActionCreator());
+    let onAddPost = () => {
+        props.addPost();
     }
 
     let onPostChange = () => {
         let text = newPostElement.current.value;
-        props.dispatch(updateNewPostTextActionCreator(text));
+        props.updateNewPostText(text);
     }
 
     return (
@@ -28,7 +28,7 @@ const MyPosts = (props) => {
                               value={props.newPostText} />
                 </div>
                 <div>
-                    <button onClick={addPost} className={style.btn + " " + style.btn1}>Add post</button>
+                    <button onClick={onAddPost} className={style.btn + " " + style.btn1}>Add post</button>
                 </div>
                 { postElements }
             </div>
