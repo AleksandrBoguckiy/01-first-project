@@ -2,13 +2,10 @@ import React from 'react';
 import style from './Navbar.module.css';
 import {NavLink} from "react-router-dom";
 import MyFriends from "../MyFriends/MyFriends";
-import Message from "../Dialogs/Message/Message";
-import DialogItem from "../Dialogs/DialogItem/DialogItem";
 
 const Navbar = (props) => {
-
     let myFriends =
-        props.state.myFriends.map(f => <MyFriends name={f.name} id={f.id} />);
+        props.sidebar.myFriends.map(f => <MyFriends name={f.name} id={f.id} />);
 
     return (
         <nav className={style.nav}>

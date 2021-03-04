@@ -3,7 +3,6 @@ import style from './MyPosts.module.css';
 import Post from "./Post/Post";
 
 const MyPosts = (props) => {
-    debugger;
 
     let postElements =
         props.posts.map(p => <Post massage={p.message} like={p.like} />);
