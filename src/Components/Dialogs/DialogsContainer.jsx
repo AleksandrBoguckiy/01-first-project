@@ -1,9 +1,9 @@
-import React from 'react';
 import {sendMessageActionCreator, updateSendMessageTextActionCreator} from "../../redux/dialogs-reducer";
 import Dialogs from "./Dialogs";
 import {connect} from "react-redux";
 
 const mapStateToProps = (state) => {
+    debugger;
     return{
         dialogsPage: state.dialogsPage,
         messages: state.dialogsPage.messages,

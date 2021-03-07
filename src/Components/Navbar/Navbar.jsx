@@ -5,7 +5,7 @@ import MyFriends from "../MyFriends/MyFriends";
 
 const Navbar = (props) => {
     let myFriends =
-        props.sidebar.myFriends.map(f => <MyFriends name={f.name} id={f.id} />);
+        props.sidebar.myFriends.map(f => <MyFriends name={f.name} key={f.id} id={f.id} />);
 
     return (
         <nav className={style.nav}>
