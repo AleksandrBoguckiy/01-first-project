@@ -14,11 +14,15 @@
     position: relative;
     top: 25px;
 }
+
+.data_name {
+    font-weight: bold;
+    font-size: 18px;
+    color: #FFCD24;
+}
 .users {
     color: white;
     padding: 10px;
-    margin-bottom: 50px;
-
 }
 
 .avatar img {
@@ -59,4 +63,15 @@
     background-color: #33393D;
     color: #FFCD24;
     border: 2px solid #33393D;
+}
+
+.selectedPage {
+    color: #FFCD24;
+    padding: 5px;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.pageItems {
+    padding-bottom: 18px;
 }
