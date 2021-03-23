@@ -7,7 +7,8 @@ const Users = (props) => {
     let pagesCount = Math.ceil(props.totalUsersCount / props.pageSize);
 
     let pages = [];
-    for (let i = Math.max(props.currentPage - 5, 1); i <= Math.max(1, Math.min(props.currentPage + 5, pagesCount)); i++) {
+    for (let i = Math.max(props.currentPage - 5, 1); i <= Math.max(1,
+        Math.min(props.currentPage + 5, pagesCount)); i++) {
         pages.push(i);
     }
 
