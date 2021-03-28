@@ -1,9 +1,24 @@
 .header {
-    width: max-content;
-    height: 250px;
+    width: 1000px;
+    height: 200px;
 }
 
 .avatar {
     width: 300px;
     padding: 10px;
+}
+
+.fullUser {
+    color: #FFCD24;
+    font-weight: bold;
+    position: absolute;
+    top: 300px;
+    font-size: 25px;
+    left: 680px;
+}
+
+.fullUser p {
+    color: #292929;
+    font-size: 15px;
+    margin-top: 0px;
 }

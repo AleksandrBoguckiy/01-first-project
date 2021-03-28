@@ -46,11 +46,11 @@ const Users = (props) => {
                         <NavLink to={'/profile/' + u.id} style={{textDecoration: 'none'}}>
                         <div className={style.data_name}>{u.name}</div>
                         </NavLink>
-                        <div>{"u.status"}</div>
+                        <div>{u.status !=null ? u.status : 'status not set'}</div>
                     </span>
                     <span>
-                        <div>{"u.location.country"}</div>
-                        <div>{"u.location.city"}</div>
+                        <div>{'country'}</div>
+                        <div>{'city'}</div>
                     </span>
                 </span>
                 </div>)

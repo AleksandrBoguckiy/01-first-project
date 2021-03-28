@@ -3,7 +3,7 @@ import Dialogs from "./Dialogs";
 import {connect} from "react-redux";
 
 const mapStateToProps = (state) => {
-    debugger;
+
     return{
         dialogsPage: state.dialogsPage,
         messages: state.dialogsPage.messages,
@@ -12,6 +12,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => {
+
     return {
         sendMessage: () => {
             dispatch(sendMessageActionCreator())
