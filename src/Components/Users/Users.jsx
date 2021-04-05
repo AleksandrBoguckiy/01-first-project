@@ -39,7 +39,7 @@ const Users = (props) => {
                                     {withCredentials: true, headers: {"API-KEY": '97576cab-73c5-46e1-a60e-d028ac72e336'}})
                                     .then(response => {
                                         if (response.data.resultCode === 0) {
-                                            props.follow(u.id)
+                                            props.unFollow(u.id)
                                         }
                                     });
                             }}>Unfollow</button>
