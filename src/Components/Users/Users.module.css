@@ -60,7 +60,13 @@
     color: black;
 }
 
-.btn2:active{
+.btn2:active {
+    background-color: #33393D;
+    color: #FFCD24;
+    border: 2px solid #33393D;
+}
+
+.btn2:disabled {
     background-color: #33393D;
     color: #FFCD24;
     border: 2px solid #33393D;
