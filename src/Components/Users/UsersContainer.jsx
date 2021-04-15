@@ -7,7 +7,7 @@ import {
     unFollow
 } from "../../redux/user-reducer";
 import React from "react";
-import {Redirect} from "react-router-dom";
+import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 
 
 class UsersAPIComponent extends React.Component {
@@ -22,7 +22,6 @@ class UsersAPIComponent extends React.Component {
     }
 
     render() {
-        if (!this.props.isAuth) return <Redirect to='/login' />
         return <>
             {this.props.isFetching ? <Preloader /> : null}
             <Users totalUsersCount={this.props.totalUsersCount}
@@ -38,6 +37,9 @@ class UsersAPIComponent extends React.Component {
     }
 }
 
+let AuthRedirectComponent = withAuthRedirect(UsersAPIComponent);
+
+
 let mapStateToProps = (state) => {
     return {
         users: state.usersPage.users,
@@ -51,6 +53,6 @@ let mapStateToProps = (state) => {
 }
 
 const UsersContainer = connect(mapStateToProps,
-    {follow, unFollow, setCurrentPage, toggleFollowingProgress, getUsers})(UsersAPIComponent);
+    {follow, unFollow, setCurrentPage, toggleFollowingProgress, getUsers})(AuthRedirectComponent);
 
 export default UsersContainer;

@@ -2,7 +2,7 @@ import React from 'react';
 import style from './Dialogs.module.css';
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
-import {Redirect} from 'react-router-dom';
+import {withAuthRedirect} from "../../hoc/withAuthRedirect";
 
 
 const Dialogs = (props) => {
@@ -24,8 +24,6 @@ const Dialogs = (props) => {
         props.updateSendMessageText(text);
     }
 
-    if (!props.isAuth) return <Redirect to='/login' />
-
     return (
         <div className={style.dialogs}>
             <div className={style.dialogItems}>
@@ -46,4 +44,6 @@ const Dialogs = (props) => {
     )
 }
 
-export default Dialogs;
+let AuthRedirectComponent = withAuthRedirect(Dialogs);
+
+export default AuthRedirectComponent;
