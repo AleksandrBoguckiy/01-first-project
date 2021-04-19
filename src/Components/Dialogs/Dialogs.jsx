@@ -2,8 +2,6 @@ import React from 'react';
 import style from './Dialogs.module.css';
 import DialogItem from "./DialogItem/DialogItem";
 import Message from "./Message/Message";
-import {withAuthRedirect} from "../../hoc/withAuthRedirect";
-
 
 const Dialogs = (props) => {
 
@@ -44,6 +42,4 @@ const Dialogs = (props) => {
     )
 }
 
-let AuthRedirectComponent = withAuthRedirect(Dialogs);
-
-export default AuthRedirectComponent;
+export default Dialogs;
