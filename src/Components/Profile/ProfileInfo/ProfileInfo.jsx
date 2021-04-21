@@ -3,6 +3,8 @@ import style from './ProfileInfo.module.css';
 import Preloader from '../../common/Preloader';
 import Header from '../../../assets/images/header.png';
 import Avatar from '../../../assets/images/siluet_4108.jpg';
+import ProfileStatus from './ProfileStatus.jsx'
+
 const ProfileInfo = (props) => {
     if (!props.profile) {
         return <Preloader />
@@ -15,9 +17,7 @@ const ProfileInfo = (props) => {
             </div>
             <div className={style.fullUser}>
                 {props.profile.fullName}
-                <p className={style.aboutMe}>
-                    {props.profile.aboutMe}
-                </p>
+                <ProfileStatus status={'Hello, my dear friends'} />
             </div>
             <div>
                 <img className={style.avatar} src={props.profile.photos.large != null ? props.profile.photos.large : Avatar} alt={'Avatar'}/>

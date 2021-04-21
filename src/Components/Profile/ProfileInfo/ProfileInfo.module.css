@@ -17,8 +17,15 @@
     left: 680px;
 }
 
-.fullUser p {
+.status {
     color: #292929;
+    font-size: 16px;
+}
+
+.edit_status {
+    outline: none;
+    border: 2px solid #FFCD24;
+    resize: none;
+    font-weight: bold;
     font-size: 15px;
-    margin-top: 0px;
 }
